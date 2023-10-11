@@ -25,7 +25,16 @@ public class Main {
         
             switch (op) {
                 case 1:
-
+                    String nome = JOptionPane.showInputDialog("digite o nome");
+                    String email = JOptionPane.showInputDialog("digite email");
+                    String fone = JOptionPane.showInputDialog("digite fone");
+                    
+                    Pessoa p = new Pessoa(nome, email, fone);
+                    if (p.cadastrar()){
+                        JOptionPane.showMessageDialog(null,"cadastro realizado com sucesso");
+                    }else{
+                        JOptionPane.showMessageDialog(null, "cadastro falhou");
+                    }
                     break;
                 case 2:
 
